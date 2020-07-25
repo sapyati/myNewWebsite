@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 960px;
+  height: auto;
+  min-height: 600px;
+  border: 1px solid red;
+  margin: 0px auto;
+}
+
+.nav {
+  height: 100px;
+  background: #1b6eda;
+}
+
+.logo {
+  width: 200px;
+  height: 75px;
+  float: left;
+  margin: 10px;
+}
+
+.menu {
+  float: right;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-right: 35px;
+  line-height: 100px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
