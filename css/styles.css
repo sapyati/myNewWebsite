@@ -112,3 +112,29 @@
   line-height: 50px;
   color: #fff;
 }
+
+.slider-wrapper {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid grey;
+  color: red;
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+.wow {
+  visibility: hidden;
+}

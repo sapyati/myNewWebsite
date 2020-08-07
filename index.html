@@ -2,14 +2,45 @@
 <html>
   <head>
     <title>Gokhale Bandhu Bakarwadi</title>
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".slider").slick({
+          autoplay: true,
+          prevArrow: false,
+          nextArrow: false,
+        });
+
+        $("button.next").click(function () {
+          $(".slider").slick("slickNext");
+        });
+        $("button.prev").click(function () {
+          $(".slider").slick("slickPrev");
+        });
+      });
+      new WOW().init();
+    </script>
   </head>
   <body>
     <!-- our website begins here -->
     <!-- container starts here -->
     <div class="container">
       <div class="nav">
-        <div class="logo">
+        <div
+          data-wow-iteration="3"
+          data-wow-duration="0.15"
+          class="logo wow pulse"
+        >
           <a href="">
             <img src="images/logo.png" alt="" />
           </a>
@@ -31,13 +62,23 @@
           </ul>
         </div>
       </div>
-      <div class="slider">
-        <img src="images/banner_image_1.jpg" alt="" />
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img src="images/banner_image_1.jpg" alt="" />
+          <img src="images/banner_image_1.jpg" alt="" />
+        </div>
+        <button class="arrow prev">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <button class="arrow next">
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
       </div>
+
       <!-- info-wrapper starts here -->
       <div class="info-wrapper">
-        <div class="info-box">
-          <h3>Quality</h3>
+        <div class="info-box wow bounceInRight">
+          <h3>Qualitysss</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
             convallis euismod massa in lobortis. Nullam tincidunt tristique
@@ -45,7 +86,7 @@
             orci auctor.
           </p>
         </div>
-        <div class="info-box middle">
+        <div class="info-box middle wow bounceInRight" data-wow-delay="2s">
           <h3>Tradition</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -54,7 +95,7 @@
             orci auctor.
           </p>
         </div>
-        <div class="info-box">
+        <div class="info-box wow bounceInRight" data-wow-delay="3s">
           <h3>Taste</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -69,6 +110,7 @@
         <!-- this text should be replaced in future -->
         <h3>About our tradition</h3>
         <p>
+          <i class="fa fa-address-book" aria-hidden="true"></i>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
           convallis euismod massa in lobortis. Nullam tincidunt tristique
           varius. Aliquam sodales odio eget risus ultricies, vitae egestas orci
